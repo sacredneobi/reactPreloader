@@ -1,0 +1,32 @@
+.button {
+  align-items: center;
+  background: rgb(245, 245, 250);
+  border: 0px;
+  border-radius: 8px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 20px 0px,
+    rgba(29, 13, 202, 0.09) 10px 10px 30px 0px;
+  box-sizing: border-box;
+  color: rgb(42, 31, 98);
+  cursor: pointer;
+  display: flex;
+  font-family: "Cascadia Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  user-select: none;
+  touch-action: manipulation;
+  width: max-content;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: pre-wrap;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+  background: #f8f8ff;
+}

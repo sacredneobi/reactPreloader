@@ -1,0 +1,29 @@
+.loader div {
+  position: absolute;
+  animation: loader-animation 0.88s linear infinite;
+  width: 58px;
+  height: 58px;
+  top: 21px;
+  left: 21px;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 0 #e15b64;
+  transform-origin: 29px 29.95px;
+}
+.loader_container {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.loader {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+.loader div {
+  box-sizing: content-box;
+}

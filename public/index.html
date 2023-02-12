@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Preload Example" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Preload Example</title>
+
+    <style>
+      :root {
+        --bg: #eceaef;
+      }
+      body {
+        background-color: var(--bg);
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #202124;
+        }
+      }
+      @keyframes loader-animation {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .loader div {
+        position: absolute;
+        animation: loader-animation 0.88s linear infinite;
+        width: 58px;
+        height: 58px;
+        top: 21px;
+        left: 21px;
+        border-radius: 50%;
+        box-shadow: 0 2px 0 0 #e15b64;
+        transform-origin: 29px 29.95px;
+      }
+      .loader_container {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        overflow: hidden;
+        background: none;
+      }
+      .loader {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+      }
+      .loader div {
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loader_container">
+        <div class="loader">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
